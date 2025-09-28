@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ChatController {
 
-    @MessageMapping("/app/sendmessage")
+    @MessageMapping("/sendMessage")
     @SendTo("/topic/messages")
-    public ChatMessage sendMessage(final ChatMessage message){
+    public ChatMessage broadcastMessage(ChatMessage message) {
         return message;
     }
 
